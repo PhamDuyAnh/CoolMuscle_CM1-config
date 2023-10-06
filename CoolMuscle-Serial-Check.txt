@@ -1,0 +1,202 @@
+--> !		: Reset
+--> $		: Save to EEPROM & reset
+--> ?		: Query
+			?0~16	:Program Bank
+			?70 	:Input Status (D0~D7)
+			?71 	:Input Status (D8~D15)reserved for expansion
+			?72 	:Output Status (D0~D7)
+			?73 	:Analog Input Value CH1
+			?74	:Analog Input Value CH2
+			?75 	:Counter Value CH1
+			?75 	:Counter Value CH2
+			?77	:Display all Banks
+			?78	:Pushing Event
+			?79	:Push Timer
+			?80	:Torque
+			?85	:? version??? (ID1 :CM1v2.39.5 #01236)
+			?87	:View all param 1-64-84
+			?90	:All parameters
+			?91	:Position Data
+			?92	:Speed Data
+			?93	:Acceleration Data
+			?94	:Timer Data
+			?95	:Position Error
+			?96	:Current Position
+			?97	:Current Speed
+			?98	:Iq Real Averaged
+			?99	:Motor Status (Ux.n=X)
+				0:Running
+				1:Counter Overflow
+				2:Over Regenerated Voltage Limit
+				4:Over Load/Current
+				8:Inposition Signal
+				16: Free
+				32:
+				40:
+				128:temperature alarm
+				255: emagency stop alarm
+--> %84		: -> maxAxisNo=1 ???
+--> %85		: K parameter
+--> %87		: H parameter
+--> %100	: View version
+
+--> K3		: Maximum Speed
+--> K13		: Product Category
+--> K14		: Communication Echo
+--> K16		: Interface Type -> 
+			0 sets motor to a P – type
+			1 sets motor to a V – type
+			2 sets motor to a C - type
+--> K19		: Serial No
+--> K52 	: Gain
+--> W=xxx	: xxx is password
+--> W=526	: ? for (V0.205)
+--> W=885	: ? for (V0.205)
+--> W=924	: ? (CM1v2.39.5)	(v4.1.7.4, v4.4.2)
+
+The 'missing in position event' is a result of this conflict. We recommend that you set K14=1111 which turns the echo from the motor off. With Version 1.14 and earlier firmware, you are required to enter a password to change this K parameter (w=924). With version 1.16 and greater, you donot need a password to change K14.
+
+CoolWorks Lite 4.1.7.4	--> Ok
+ S Version:V0.205
+ H Version:V4.00
+ Serial No:1    
+ Id num:1 
+
+K1 =0       ,K2 =2024    ,K3 =3000    ,K4 =200     
+K5 =250     ,K6 =70      ,K7 =-14     ,K8 =175     
+K9 =1400    ,K10=11      ,K11=0       ,K12=7       
+K13=1       ,K14=0       ,K16=0       ,K17=80      
+K18=6       ,K19=1       ,K20=0       ,K21=0       
+K22=0       ,K23=0       ,K24=0   
+
+?90.1
+K25=3333    ,K26=0000    ,K27=0000    ,K28=0100    
+K29=0000    ,K30=0000    ,K31=0200    ,K32=0300    
+K33=11      ,K34=21      ,K35=31      ,K36=0       
+K37=3       ,K38=0       ,K39=128     ,K40=2000    
+K41=2000    ,K42=10      ,K43=100     ,K44=100     
+K45=1       ,K46=0       ,K47=30      ,K48=0       
+K49=10      ,K50=10      ,K51=10      ,K52=50      
+K53=250     ,K54=2       ,K55=5       ,K56=50      
+K57=3000    ,K58=0       ,K59=0       ,K60=30      
+K61=200     ,K62=0       ,K63=0       ,K64=0     
+
+CoolWorks Lite 4.3.2
+CoolWorks Lite 4.3.3
+CoolWorks Lite 4.4.1
+CoolWorks Lite 4.4.2  --> Ok
+ID1 :CM1v2.39.5 #01236
+
+K1 =0       ,K2 =2084    ,K3 =3300    ,K4 =110     
+K5 =200     ,K6 =200     ,K7 =0       ,K8 =150     
+K9 =700     ,K10=15      ,K11=0       ,K12=8       
+K13=1       ,K14=0       ,K16=0       ,K17=80      
+K18=6       ,K19=1236
+
+?90.1
+K20.1=0     ,K21.1=0     ,K22.1=200   ,K23.1=7     
+K24.1=1000  ,K25.1=3333  ,K26.1=0000  ,K27.1=0000  
+K28.1=9800  ,K29.1=0000  ,K30.1=0000  ,K31.1=0000  
+K32.1=0000  ,K33.1=11    ,K34.1=21    ,K35.1=30    
+K36.1=1     ,K37.1=4     ,K38.1=1     ,K39.1=128   
+K40.1=2000  ,K41.1=1000  ,K42.1=30    ,K43.1=100   
+K44.1=100   ,K45.1=1     ,K46.1=0     ,K47.1=30    
+K48.1=5     ,K49.1=10    ,K50.1=100   ,K51.1=10    
+K52.1=10    ,K53.1=200   ,K54.1=1     ,K55.1=5     
+K56.1=50    ,K57.1=3000  ,K58.1=0     ,K59.1=0     
+K60.1=50    ,K61.1=200   ,K62.1=0     ,K63.1=0     
+K64.1=0     ,K65.1=0     ,K66.1=0     ,K67.1=1     
+K68.1=0     ,K69.1=0     ,K70.1=1     ,K71.1=100   
+K72.1=300   ,K73.1=10    ,K74.1=0     ,K75.1=0     
+K76.1=0     ,K77.1=0     ,K78.1=0     ,K79.1=0     
+K80.1=0     ,K81.1=0     ,K82.1=0     ,K83.1=0     
+K84.1=0      
+?90.1
+K20.1=0     ,K21.1=0     ,K22.1=200   ,K23.1=7     
+K24.1=1000  ,K25.1=3333  ,K26.1=0000  ,K27.1=0000  
+K28.1=9800  ,K29.1=0000  ,K30.1=0000  ,K31.1=0000  
+K32.1=0000  ,K33.1=11    ,K34.1=21    ,K35.1=30    
+K36.1=1     ,K37.1=4     ,K38.1=1     ,K39.1=128   
+K40.1=2000  ,K41.1=1000  ,K42.1=30    ,K43.1=100   
+K44.1=100   ,K45.1=1     ,K46.1=0     ,K47.1=30    
+K48.1=5     ,K49.1=10    ,K50.1=100   ,K51.1=10    
+K52.1=50    ,K53.1=200   ,K54.1=1     ,K55.1=5     
+K56.1=50    ,K57.1=3000  ,K58.1=0     ,K59.1=0     
+K60.1=50    ,K61.1=200   ,K62.1=0     ,K63.1=0     
+K64.1=0     ,K65.1=0     ,K66.1=0     ,K67.1=10    
+K68.1=0     ,K69.1=0     ,K70.1=1     ,K71.1=100   
+K72.1=300   ,K73.1=10    ,K74.1=0     ,K75.1=0     
+K76.1=0     ,K77.1=0     ,K78.1=0     ,K79.1=0     
+K80.1=0     ,K81.1=0     ,K82.1=0     ,K83.1=0     
+K84.1=0     
+?90.1
+K20.1=0     ,K21.1=0     ,K22.1=200   ,K23.1=1     
+K24.1=1000  ,K25.1=3333  ,K26.1=0000  ,K27.1=0000  
+K28.1=0100  ,K29.1=0000  ,K30.1=0000  ,K31.1=0200  
+K32.1=0300  ,K33.1=11    ,K34.1=21    ,K35.1=30    
+K36.1=1     ,K37.1=4     ,K38.1=0     ,K39.1=128   
+K40.1=3000  ,K41.1=2000  ,K42.1=2000  ,K43.1=100   
+K44.1=100   ,K45.1=1     ,K46.1=0     ,K47.1=30    
+K48.1=0     ,K49.1=10    ,K50.1=10    ,K51.1=10    
+K52.1=5     ,K53.1=201   ,K54.1=1     ,K55.1=5     
+K56.1=5000  ,K57.1=10000 ,K58.1=0     ,K59.1=0     
+K60.1=30    ,K61.1=200   ,K62.1=0     ,K63.1=0     
+K64.1=0     ,K65.1=0     ,K66.1=0     ,K67.1=10    
+K68.1=0     ,K69.1=0     ,K70.1=1     ,K71.1=100   
+K72.1=300   ,K73.1=10    ,K74.1=0     ,K75.1=0     
+K76.1=0     ,K77.1=0     ,K78.1=0     ,K79.1=0     
+K80.1=0     ,K81.1=0     ,K82.1=0     ,K83.1=0     
+K84.1=0    
+?K1
+?K2
+?K3
+?K4
+?K5
+?K6
+?K7
+?K8
+?K9
+?K10
+?K11
+?K12
+?K13
+?K14
+?K15
+?K16
+?K17
+?K18
+?K19
+?K20
+
+?K21
+?K22
+?K23
+?K24
+
+?K65
+?K66
+?K67
+?K68
+?K69
+
+?K70
+?K71
+?K72
+?K73
+?K74
+?K75
+?K76
+?K77
+?K78
+?K79
+
+?K80
+?K81
+?K82
+?K83
+?K84
+?K85
+?K86
+?K87
+?K88
+?K89
